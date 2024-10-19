@@ -1,0 +1,27 @@
+/*
+
+SPDX-FileCopyrightText: © 2023 Dai Foundation <www.daifoundation.org>
+
+SPDX-License-Identifier: AGPL-3.0-or-later
+
+*/
+
+import { SupportedChainId } from '../constants/chainID';
+import { SupportedNetworks } from '../constants/networks';
+
+export type BlockExplorer = 'mainnet' | 'Arbiscan' | 'block explorer';
+
+export type SupportedChain = {
+  blockExplorerUrl: string;
+  blockExplorerName: BlockExplorer;
+  chainId: SupportedChainId;
+  label: string;
+  network: SupportedNetworks;
+  defaultRpc: string;
+  spockUrl?: string;
+  type: 'gasless' | 'normal';
+  showInProduction: boolean;
+  rpcs: {
+    [key: string]: string;
+  };
+};

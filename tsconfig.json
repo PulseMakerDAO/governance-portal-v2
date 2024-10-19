@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "jsxImportSource": "theme-ui",
+    "strictNullChecks": true,
+    "types": ["jest"],
+    "baseUrl": "./",
+    "paths": {
+      "lib/*": ["lib/*"],
+      "modules/*": ["modules/*"]
+    },
+    "typeRoots": ["modules/app/types", "./node_modules/@types"],
+    "incremental": true
+  },
+  "exclude": ["node_modules"],
+  "include": [
+    "next-env.d.ts",
+    "lib",
+    "modules",
+    "pages",
+    "__tests__",
+    "@testing-library/jest-dom",
+    "middleware.ts"
+  ]
+}
