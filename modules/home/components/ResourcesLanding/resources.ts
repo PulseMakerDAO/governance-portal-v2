@@ -107,7 +107,7 @@ export const resources: LandingResource[] = [
   },
   {
     title: 'MakerDAO GitHub',
-    url: 'https://github.com/makerdao/',
+    url: 'https://github.com/PulseMakerDAO/',
     category: ResourceCategory.DEVELOPERS,
     bg: ResourceBackground.DEVELOPERS,
     color: ResourceColor.DEVELOPERS,

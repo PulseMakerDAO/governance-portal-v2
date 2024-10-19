@@ -32,7 +32,7 @@ export async function getGithubExecutives(network: SupportedNetworks): Promise<C
   const proposalIndex = await (await fetch(EXEC_PROPOSAL_INDEX)).json();
 
   const githubRepo = {
-    owner: 'Tech0001',
+    owner: 'PulseMakerDAO',
     repo: 'community',
     page: 'governance/votes'
   };
