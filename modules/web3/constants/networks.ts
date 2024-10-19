@@ -65,6 +65,46 @@ export const CHAIN_INFO: ChainInfo = {
       [NodeProviders.ALCHEMY]: `https://rpc.pulsechain.com`
     },
     showInProduction: true
+  },
+  [SupportedChainId.ARBITRUMTESTNET]: {
+    blockExplorerUrl: 'sepolia.arbiscan.io',
+    blockExplorerName: 'Arbiscan',
+    chainId: SupportedChainId.ARBITRUMTESTNET,
+    label: 'ArbitrumTestnet',
+    type: 'gasless',
+    network: SupportedNetworks.ARBITRUMTESTNET,
+    defaultRpc: NodeProviders.ALCHEMY,
+    rpcs: {
+      [NodeProviders.ALCHEMY]: `https://arb-sepolia.g.alchemy.com/v2/${config.ALCHEMY_ARBITRUM_TESTNET_KEY}`
+    },
+    showInProduction: false
+  },
+  [SupportedChainId.ARBITRUM]: {
+    blockExplorerUrl: 'arbiscan.io',
+    blockExplorerName: 'Arbiscan',
+    chainId: SupportedChainId.ARBITRUM,
+    label: 'Arbitrum',
+    type: 'gasless',
+    network: SupportedNetworks.ARBITRUM,
+    defaultRpc: NodeProviders.ALCHEMY,
+    rpcs: {
+      [NodeProviders.ALCHEMY]: `https://arb-mainnet.g.alchemy.com/v2/${config.ALCHEMY_ARBITRUM_KEY}`
+    },
+    showInProduction: false
+  },
+  [SupportedChainId.TENDERLY]: {
+    blockExplorerUrl: `dashboard.tenderly.co/explorer/vnet/${config.TENDERLY_RPC_KEY}`,
+    blockExplorerName: 'Etherscan',
+    chainId: SupportedChainId.TENDERLY,
+    label: 'Tenderly',
+    type: 'normal',
+    network: SupportedNetworks.TENDERLY,
+    defaultRpc: NodeProviders.TENDERLY,
+    spockUrl: TENDERLY_SPOCK_URL,
+    rpcs: {
+      [NodeProviders.TENDERLY]: config.USE_MOCK_WALLET && TENDERLY_RPC_URL ? TENDERLY_RPC_URL : `https://virtual.mainnet.rpc.tenderly.co/${config.TENDERLY_RPC_KEY}`
+    },
+    showInProduction: false
   }
 };
 
