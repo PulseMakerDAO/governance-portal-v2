@@ -62,12 +62,12 @@ const NetworkSelect = (): React.ReactElement => {
         return;
       }
 
-      try {
-        await connector.activate(desiredChainId === -1 ? undefined : desiredChainId);
-        setError(undefined);
-      } catch (err) {
-        setError(err);
-      }
+       try {
+         await connector.activate(desiredChainId === -1 ? undefined : desiredChainId);
+         setError(undefined);
+       } catch (err) {
+         setError(err);
+       }
     },
     [connector, chainId, setError]
   );
@@ -96,9 +96,12 @@ const NetworkSelect = (): React.ReactElement => {
         }}
       >
         <Icon name={CHAIN_INFO[chainKey].label} sx={{ width: '22px', height: '22px' }} />
-        <Text sx={{ ml: 3 }}>{CHAIN_INFO[chainKey].label}</Text>
+        <Text sx={{ ml: 3 }}>
+          {CHAIN_INFO[chainKey].label === 'mainnet' ? 'PulseChain' : CHAIN_INFO[chainKey].label}
+        </Text>
       </Flex>
-    ));
+    ))
+    .filter((_, index) => index !== 1); // Remove the second item;
 
   return (
     <Box sx={{ ml: ['auto', 3, 0] }}>
