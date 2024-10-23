@@ -9,7 +9,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 import { SupportedChainId } from '../constants/chainID';
 import { SupportedNetworks } from '../constants/networks';
 
-export type BlockExplorer = 'Etherscan' | 'Arbiscan' | 'block explorer';
+export type BlockExplorer = 'mainnet' | 'Arbiscan' | 'block explorer';
 
 export type SupportedChain = {
   blockExplorerUrl: string;

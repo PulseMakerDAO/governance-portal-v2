@@ -51,18 +51,18 @@ const { TENDERLY_RPC_URL } = tenderlyTestnetData;
 //todo: change name to SUPPORTED_CHAIN_INFO
 export const CHAIN_INFO: ChainInfo = {
   [SupportedChainId.MAINNET]: {
-    blockExplorerUrl: 'etherscan.io',
-    blockExplorerName: 'Etherscan',
+    blockExplorerUrl: 'scan.mypinata.cloud/ipfs/bafybeih3olry3is4e4lzm7rus5l3h6zrphcal5a7ayfkhzm5oivjro2cp4/#',
+    blockExplorerName: 'mainnet',
     chainId: SupportedChainId.MAINNET,
-    label: 'Mainnet',
+    label: 'mainnet',
     type: 'normal',
     network: SupportedNetworks.MAINNET,
     defaultRpc: NodeProviders.ALCHEMY,
     spockUrl:
       process.env.NEXT_PUBLIC_VERCEL_ENV === 'development' ? STAGING_MAINNET_SPOCK_URL : MAINNET_SPOCK_URL,
     rpcs: {
-      [NodeProviders.INFURA]: `https://mainnet.infura.io/v3/${config.INFURA_KEY}`,
-      [NodeProviders.ALCHEMY]: `https://eth-mainnet.g.alchemy.com/v2/${config.ALCHEMY_KEY}`
+      [NodeProviders.INFURA]: `https://rpc.v4.testnet.pulsechain.com`,
+      [NodeProviders.ALCHEMY]: `https://rpc.v4.testnet.pulsechain.com`
     },
     showInProduction: true
   },
